@@ -28,6 +28,11 @@ class ComposeQuadrant : ComponentActivity() {
         setContent {
             HappyBirthdayTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    // 以下有兩種顯示的function: ComposeQuadrantContent 跟 ComposeQuadrantContent2
+                    // 兩者的結構差異在結構不同:
+                    // ComposeQuadrantContent: Column > Row > Column-with-Text
+                    // ComposeQuadrantContent2: Row > Column > Column-with-Text
+                    // 用第一種方式比較符合網格設計
                     ComposeQuadrantContent(
                         modifier = Modifier
                             .padding(innerPadding)
